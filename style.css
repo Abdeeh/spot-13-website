@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background-color: #252525;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    max-width: 75ch;
+    margin: auto;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+a {
+    color: #fff;
+}
+
+.resp1000px {
+    display: none;
+}
+
+
+/* Header */
+
+header {
+    padding: 1rem;
+    background-color: #205877;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    margin: 1em;
+    background-color: #205877;
+    padding: 0.2em;
+}
+
+header a:hover {
+    background-color: #fff;
+    color: #205877;
+}
+
+#headerLogo {
+    margin: auto;
+    max-width: 70px;
+}
+
+#loginBtn {
+    background-color: #A9DBFF;
+    color: #000;
+    padding: .5em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+#loginBtn:hover {
+    background-color: #fff;
+}
+
+.titre {
+    margin: 75px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.section-1 {
+    display: flex;
+}
+
+.section-2 {
+    display: flex;
+}
+
+.section-3 {
+    display: flex;
+}
+
+.section-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+    height: 600px;
+}
+
+.magenta,
+.orange,
+.bleu,
+.jaune {
+    height: 100%;
+    width: 50px;
+}
+
+.magenta {
+    background-color: #FF00FF;
+}
+
+.orange {
+    background-color: #FF6B00;
+}
+
+.bleu {
+    background-color: #0038FF;
+}
+
+.jaune {
+    background-color: #B7FF00;
+}
+
+
+/* Images */
+.graffeur {
+    box-shadow: 50px 0 0 #FF00FF;
+}
+
+.colonne {
+    box-shadow: -50px 0 0 #FF6B00;
+}
+
+.statue {
+    box-shadow: 50px 0 0 #0038FF;
+}
+
+.portrait {
+    box-shadow: -50px 0 0 #B7FF00;
+    height: 100%;
+}
+
+.graffeur,
+.colonne,
+.statue,
+.portrait {
+    height: 100%;
+}
+
+.carte {
+    margin: 0 auto;
+}
+
+hr {
+    max-width: 900px;
+    margin: 200px auto;
+}
+
+.adresse {
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+footer {
+    background-color: #7A1C1F;
+    padding: 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+footer ul {
+    list-style-type: none;
+    line-height: 2em;
+    text-align: center;
+}
+
+.footerBtn {
+    padding: .2em;
+}
+
+.footerBtn:hover {
+    background-color: #fff;
+    color: #7A1C1F;
+}
+
+#footerCont1,
+#footerCont2 {
+    margin: 0 1rem;
+}
+
+#footerSocials {
+    position: absolute;
+    right: 5rem;
+    height: 50px;
+}
+
+#footerSocials img {
+    height: 35px;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 1450px) {
+    .graffeur,
+    .colonne,
+    .statue,
+    .portrait {
+        height: 400px;
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding: 5em 0;
+        height: auto;
+    }
+
+    p {
+        max-width: 55ch;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 1.1em;
+        max-width: 55ch;
+        margin: auto 1em;
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graffeur,
+    .colonne,
+    .statue,
+    .portrait {
+        display: none;
+    }
+
+    .resp1000px {
+        display: initial;
+        background-color: yellow;
+        width: 100%;
+        height: 200px;
+        margin: 100px 0;
+    }
+
+    #resp-sct1 {
+        background: url(images/graffeur.jpg) no-repeat;
+        background-position-y: center;
+        background-size: 100%;
+        box-shadow: 0 50px 0 #f0f;
+    }
+    #resp-sct2 {
+        background: url(images/colonne.jpg) no-repeat;
+        background-position-y: center;
+        background-size: 100%;
+        box-shadow: 0 50px 0 #FF6B00;
+    }
+    #resp-sct3 {
+        background: url(images/statue.jpg) no-repeat;
+        background-position-y: 30%;
+        background-size: 100%;
+        box-shadow: 0 50px 0 #0038FF;
+    }
+
+    #resp-sct4 {
+        background: url(images/portrait.jpg) no-repeat;
+        background-position-y: 40%;
+        background-size: 100%;
+        box-shadow: 0 50px 0 #B7FF00;
+    }
+
+    .carte {
+        margin: initial;
+        width: 70%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        position: relative;
+        padding-top: 80px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #headerLogo {
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #footerCont1,
+    #footerCont2 {
+        margin: 20px auto;
+    }
+
+    #footerSocials {
+        position:initial;
+        margin: 30px auto 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
